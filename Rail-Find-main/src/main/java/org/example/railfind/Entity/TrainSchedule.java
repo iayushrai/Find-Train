@@ -16,7 +16,7 @@ public class TrainSchedule {
     @ManyToOne
     @JoinColumn(name = "train_id")
     @JsonIgnoreProperties("trainSchedules")
-    private Train train;  // ✅ Corrected here
+    private Train train;  
 
     @ManyToOne
     @JoinColumn(name = "source_station_id")
@@ -31,7 +31,7 @@ public class TrainSchedule {
         this.id = id;
         this.departureTime = departureTime;
         this.arrivalTime = arrivalTime;
-        this.train = train;            // ✅ Corrected here
+        this.train = train;            
         this.source = source;
         this.destination = destination;
     }
@@ -61,11 +61,11 @@ public class TrainSchedule {
     }
 
     public Train getTrain() {
-        return train;  // ✅ Corrected here
+        return train;  
     }
 
     public void setTrain(Train train) {
-        this.train = train;  // ✅ Corrected here
+        this.train = train;  
     }
 
     public Station getSource() {
